@@ -7,6 +7,7 @@ from PyQt6.Qt6 import *
 from canvas import *
 from board import *
 from rule import *
+from melodyRule import *
 
 from external import fluidsynth
 
@@ -20,7 +21,7 @@ class Player(Canvas):
         rule = None
 
         if options.get("rule", "") == "Increase":
-            rule = IncreaseRule(base_pitch=20)
+            rule = IncreaseRule(base_pitch=81)
         elif options.get("rule", "") == "Melody":
             rule = MelodyRule(root_key=self.options['rootKey'],
                             scale=self.options['scale'],
