@@ -1,4 +1,5 @@
 from cell import *
+from MelodyRule import *
 
 class Rule:
   def __init__(self):
@@ -72,3 +73,5 @@ class ElemCARule(Rule):
             if self.last_row[i]==1:
                 self.notes.append(Cell(int(self.base_pitch-self.width/2+2*i)))
         return self.notes 
+        
+        

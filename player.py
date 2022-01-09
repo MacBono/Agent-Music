@@ -17,7 +17,8 @@ class Player(Canvas):
         print(f"Creating Player with {options}..")
         self.options = options
         self.stepCounter = 0
-        rule = IncreaseRule(base_pitch=80)
+        rule = MelodyRule(root_key=self.options['rootKey'],scale=self.options['scale'],octave=self.options['octave'])
+        #rule = IncreaseRule(base_pitch=80)
         board = Board()
         board.generateCells(40, rule)
         self.setBoard(board)
